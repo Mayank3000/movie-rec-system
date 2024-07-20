@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="static\styles.css">
+
+  <title> {% block title %} {% endblock title %} -MovieSage</title>
+</head>
+<nav class="navbar">
+  <a class="navbar-brand" href="/"><img src="static\Movie Sage.png" alt=""Movie Sage></a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/genres">Genres</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+  </ul>
+</nav>
+<body>
+    {% block body %}
+        
+    {% endblock body %}
+</body>
+<footer>
+  <p>&copy; 2024 Movie Sage. All rights reserved.</p>
+  <p>Connect with me on:
+    <br>
+      <a href="https://www.linkedin.com/in/mayank-mahapatra/"><img src="static/linkedin_icon.png" width="30" height="30"></a>
+      <a href="https://www.instagram.com/mayankmahapatra/"><img src="static/instagram_icon.png" width="30" height="30"></a>
+  </p>
+  <p>Discover your next favorite movie with Movie Sage!</p>
+</footer>
+</html>
