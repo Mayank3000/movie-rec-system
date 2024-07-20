@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}HOME{% endblock title %}
+{% block body %}
+  <br>
+  <p class="primary text"><b>{{error}}</b></p>
+  <div class="container">
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Favorite Movie</h1>
+            <form id="search-form" action="/" method="post">
+                <select class="form-select" type="text" name="movie_search" id="movie-search" aria-label="Default select example">
+                  {% for m in movies %}
+                  <option value="{{m}}">{{m}}</option>
+                  {% endfor %}
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+  </div>
+  {% if status==True %}
+    <div class="foryou">
+      <h2>Recommended For You:</h2>
+      <div class="movie-poster">
+          <div class="poster">
+            <a href="https://www.google.com/search?q={{movie_name[0]}}+movie+watch">
+              <img src={{poster[0]}} alt="Movie 1">
+              </a>
+              <p>{{movie_name[0]}}</p>
+          </div>
+          <div class="poster">
+            <a href="https://www.google.com/search?q={{movie_name[1]}}+movie+watch">
+              <img src={{poster[1]}} alt="Movie 2">
+              </a>
+              <p>{{movie_name[1]}}</p>
+          </div>
+          <div class="poster">
+            <a href="https://www.google.com/search?q={{movie_name[2]}}+movie+watch">
+              <img src={{poster[2]}} alt="Movie 3">
+            </a>
+              <p>{{movie_name[2]}}</p>
+          </div>
+          <div class="poster">
+            <a href="https://www.google.com/search?q={{movie_name[3]}}+movie+watch">
+            <img src={{poster[3]}} alt="Movie 4">
+            </a>
+            <p>{{movie_name[3]}}</p>
+        </div>
+        <div class="poster">
+          <a href="https://www.google.com/search?q={{movie_name[4]}}+movie+watch">
+          <img src={{poster[4]}} alt="Movie 5">
+          </a>
+          <p>{{movie_name[4]}}</p>
+        </div>  
+      </div>
+</div>
+{% endif %}
+ 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+{% endblock body %}
